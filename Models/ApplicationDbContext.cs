@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Reflection.Emit;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace SAOnlineMart.Models
 {
-    // Models/ApplicationDbContext.cs
-    public class ApplicationDbContext : DbContext
+    
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
